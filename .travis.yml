@@ -4,5 +4,5 @@ services:
 before_install:
     - docker build -t inderjitgirn/frontend -f Dockerfile.dev .
 
-Script:
+script:
     - docker run inderjitgirn/frontend npm run test -- --coverage
