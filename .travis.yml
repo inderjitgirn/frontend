@@ -2,8 +2,8 @@ sudo: required
 services:
     - docker
 before_install:
-    - sudo apt-get update
     - docker build -t inderjitgirn/frontend -f Dockerfile.dev .
 
 script:
     - docker run inderjitgirn/frontend npm run test -- --coverage
+    
