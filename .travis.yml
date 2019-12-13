@@ -1,0 +1,8 @@
+sudo: required
+services:
+    -docker
+before_install:
+    - docker build -t inderjitgirn/frontend -f Dockerfile.dev .
+
+Script:
+    - docker run inderjitgirn/frontend npm run test -- --coverage
