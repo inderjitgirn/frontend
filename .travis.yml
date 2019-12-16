@@ -2,6 +2,7 @@ sudo: required
 services:
     - docker
 before_install:
+    travis_wait:25:
     - docker build -t inderjitgirn/frontend -f Dockerfile.dev .
 
 script:
