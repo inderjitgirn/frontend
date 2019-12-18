@@ -1,14 +1,8 @@
-pipeline {
-    agent { 
-        dockerfile {
-            filename 'Dockerfile.dev'
-        }
-     stages{
-         stage('build'){
-             steps{
-                 sh docker build -t inderjitgirn/frontend -f Dockerfile.dev .
-             }    
-         }
-     }   
+agent {
+    // Equivalent to "docker build -f Dockerfile.build --build-arg version=1.0.2 ./build/
+    dockerfile {
+        filename 'Dockerfile.dev'
+        dir 'build'
+        label 'inderjitgirn/fronted'
     }
 }
