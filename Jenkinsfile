@@ -6,7 +6,7 @@ pipeline {
      stages{
          stage('build'){
              steps{
-                 docker build -t inderjitgirn/frontend -f Dockerfile.dev .
+                 sh docker build -t inderjitgirn/frontend -f Dockerfile.dev .
              }    
          }
      }   
