@@ -6,7 +6,7 @@ pipeline {
      stages{
          stage('build'){
                  docker build -t 'inderjitgirn/frontend' -f Dockerfile.dev .
-                 docker run inderjitgirn/frontend npm run test -- --coverage
+                 docker run inderjitgirn/frontend npm run test
          }
      }   
     }
