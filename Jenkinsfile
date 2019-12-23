@@ -8,12 +8,7 @@ pipeline {
          stage('build'){
              steps{
                docker build Dockerfile.dev
-             }
-         stage ('test'){
-             steps{
-                docker run inderjitgirn/frontend npm run test -- --coverage
-             }
-         }    
+             }    
          }
      }   
     }
