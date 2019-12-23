@@ -1,15 +1,13 @@
 pipeline {
     agent { 
-        dockerfile {
-            filename 'Dockerfile.dev'
-            label 'inderjitgirn/frontend'
-        }
+        dockerfile true
      stages{
          stage('build'){
              steps{
-               docker build Dockerfile.dev
+               filename 'Dockerfile.dev'
+               label 'inderjitgirn/frontend'
              }    
-         }
-     }   
+         }  
     }
+   }
 }
