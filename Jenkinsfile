@@ -7,11 +7,11 @@ pipeline {
      stages{
          stage('build'){
              steps{
-               docker build Dockerfile.dev .
+               docker build Dockerfile.dev
              }
          stage ('test'){
              steps{
-                sh docker run inderjitgirn/frontend npm run test -- --coverage
+                docker run inderjitgirn/frontend npm run test -- --coverage
              }
          }    
          }
