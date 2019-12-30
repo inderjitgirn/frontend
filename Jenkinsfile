@@ -6,7 +6,7 @@ pipeline {
       additionalBuildArgs  '--build-arg inderjitgirn\frontend'
     }
     stages {
-      stage(build) {
+      stage("build") {
         steps {
           sh 'node --version'
         }
