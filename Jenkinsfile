@@ -4,11 +4,11 @@ pipeline {
       filename 'Dockerfile.dev'
       label 'inderjitgirn\frontend'
       additionalBuildArgs  '--build-arg inderjitgirn\frontend'
-      stage("build") {
+    }
+    stage("build") {
         steps {
           sh 'node --version'
         }
       }
-    }
   }
 }
