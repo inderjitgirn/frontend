@@ -1,6 +1,6 @@
 pipeline {
   agent {
-        dockerfile {
+        dockerfile true {
       filename 'Dockerfile.dev'
       additionalBuildArgs  '--build-arg inderjitgirn\frontend'
     }
