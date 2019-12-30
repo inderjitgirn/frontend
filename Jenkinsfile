@@ -1,10 +1,12 @@
 pipeline {
+  agent{
         dockerfile {
       filename 'Dockerfile.dev'
       additionalBuildArgs  '--build-arg inderjitgirn\frontend'
     }
+  }
     stages{
-      stages("test"){
+      stage("test"){
         steps{
           echo "hi there"
         }
