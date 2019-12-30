@@ -1,9 +1,7 @@
 pipeline {
-    agent {
-    // Equivalent to "docker build -f Dockerfile.build --build-arg version=1.0.2 ./build/
-    dockerfile {
-        filename 'Dockerfile.dev'
-        label 'inderjitgirn/frontend'
-     }
-  }
+    dockerfile{
+      filename 'Dockerfile.build'
+      label 'inderjitgirn\frontend'
+      additionalBuildArgs  '--build-arg inderjitgirn\frontend'
+    }
 }
